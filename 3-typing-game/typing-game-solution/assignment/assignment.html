@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Quiz Game</title>
+    <link rel="stylesheet" href="assignment_style.css">
+    <script src="assignment_script.js" defer></script>
+</head>
+<body>
+    <h1>Typing Quiz Game</h1>
+    <p>Type the correct answer. One mistake and it's game over!</p>
+    <button id="start">Start game</button>
+
+    <div id="container">
+    <p id="question"></p>
+    <input type="text" id="answer" placeholder="Type your answer here...">
+    <button id="submit">Submit</button>
+    <button id="restart" class="hidden">Restart Quiz</button>
+    
+    <p id="score">Score: 0 | High Score: <span id="high-score">0</span></p>
+    <p id="timer"></p>
+    <p id="game-over" class="hidden">Game Over! Press Restart to try again.</p>
+    </div>
+</body>
+</html>

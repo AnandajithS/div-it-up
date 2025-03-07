@@ -1,0 +1,96 @@
+.highlight {
+  background-color: yellow;
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+
+
+.error {
+  background-color: lightcoral;
+  border: 2px solid red;
+  color: white;
+}
+
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  font-size: 30px;
+  background: linear-gradient(135deg, rgba(129, 253, 237, 0.7), rgba(241, 7, 183, 0.7));
+  color: #333;
+  padding: 20px;
+}
+
+
+button {
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background-color: #ff6b81;
+  color: white;
+}
+
+button:hover {
+  background-color: #ff3b6d;
+  color: yellow;
+  box-shadow: 2px 3px 6px grey;
+  transform: scale(1.1);
+}
+
+input {
+  font-size: 18px;
+  padding: 8px;
+  width: 250px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 2px solid #888;
+  width: 50%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.close {
+  color: red;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+
+}
+
+.close:hover {
+  color: darkred;
+  transform: scale(1.1);
+}
+
+
+#highScoreDisplay {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
