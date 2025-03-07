@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+    <title>Bank App</title>
+  </head>
+  <body>
+    <h1 id="heading">Bank App</h1>
+    <div id="app">Loading...</div>
+    <template id="login">
+        <section>
+          <h2>LOGIN</h2>
+      
+          <form id="loginForm" action="javascript:login()">
+            <label for="username">Username (required)</label>
+            <input id="username" name="user" type="text" maxlength="20" required>
+            <div id="loginError" role="alert"></div>
+            <button class="button">Login</button>
+          </form>
+          <hr>
+          <h2>REGISTER</h2>
+          <form id="registerForm" action="javascript:register()">
+          <label for="user">Username</label>
+          <input id="user" name="user" type="text">
+          <label for="currency">Currency (required)</label>
+          <input id="currency" name="currency" type="text" value="$" maxlength="5">
+          <label for="description">Description</label>
+          <input id="description" name="description" type="text" maxlength="100">
+          <label for="balance">Current balance</label>
+          <input id="balance" name="balance" type="number" value="0">
+          <div id="registerError" role="alert"></div>
+          <button class="button">Register</button>
+          </form>
+        </section>
+    </template>
+    <template id="dashboard" >
+      <header>
+          <h1 id="showuser"></h1>
+          <button id="logout" class="button" onclick="logout()">Logout</button>
+          <button id="tbutton" class="button" onclick="openBox()">Add Transactions</button>
+        </header>
+        <section id="showbalance" >
+          Balance: <span id="balance"></span><span id="currency"></span>
+        </section>
+        <h2 id="description"></h2>
+        <section>
+          <h2>Transactions</h2>
+          <table id="transactiontable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Object</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id="transactions"></tbody>
+          </table>
+        </section>
+        <button id="creditsbutton" class="button" onclick="showCredits()">Credits</button>
+    </template>
+    <template id="transaction">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <template id="credits">
+      <button id="back" class="button" onclick="backToDashboard()">Back to account</button>
+      <h1>Made by: Anandajith S</h1>
+    </template>
+    <div id="tbox" class="addtransactions">
+      <div id="tcontent">
+        <span id="close" onclick="closeBox()">&times;</span>
+        <form id="content">
+            <h5>DATE</h5>
+            <label for="date"></label>
+            <input type="date" id="date" name="date">
+            <h5>OBJECT</h5>
+            <label for="object"></label>
+            <input type="text" id="object" name="object">
+            <h5>AMOUNT (USE NEGATIVE VALUE FOR DEBIT)</h5>
+            <label for="amount"></label>
+            <input type="number" id="amount" name="amount">
+            <button id="submit" class="button" onclick="addTransactions(event);closeBox();">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
